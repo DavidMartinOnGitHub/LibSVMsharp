@@ -82,7 +82,7 @@ namespace LibSVMsharp.Extensions
             double[] target = problem.X.Select(x =>
             {
                 double[] estimations;
-                double y = x.PredictProbability(ptr_model, out estimations);
+                double y = x.PredictValues(ptr_model, out estimations);
                 temp.Add(estimations);
                 return y;
             }).ToArray();
